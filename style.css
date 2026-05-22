@@ -56,18 +56,21 @@ body{
     color: #8900FF;
 }
 .personal-quote{
-    border-top: 2px solid var(--light-gray-color);
-    border-bottom: 2px solid var(--light-gray-color);
     margin-top: 4rem;
     padding: 1.5rem 0;
 }
+section{
+  padding: .5rem;
+}
+.ls-1 { letter-spacing: 1px; }
+.ls-2 { letter-spacing: 2px; }
+.ls-3 { letter-spacing: 3px; }
+.ls-wide { letter-spacing: 0.05em; }
+.ls-tight { letter-spacing: -0.05em; }
 
 /* common css end */
 
-/* ------------------------------------------------------------- */
-
 /* ==================== Section 1: Navbar ==================== */
-/* navbar */
 
 .logo a{
     font-family: "Inter", sans-serif;
@@ -968,4 +971,29 @@ header, .navbar {
     gap: 1.25rem !important;
     font-size: 0.85rem;
   }
+}
+
+
+@media screen and (max-width: 768px) {
+    .container{
+      max-width: 660px !important;
+    }
+    .hero-content h1 {
+      font-weight: 800;
+      font-size: 2.5rem;
+    }
+    .hero-content {
+      max-width: 100%;
+    }
+    .nav-links {
+      background-color: rgba(208, 209, 225, 0.4);
+      padding: 1rem 0;
+      margin-top: .5rem;
+    }
+    .logo{
+      margin-left: 1rem;
+    }
+    .hamburger-menu{
+      margin-right: 1rem;
+    }
 }
