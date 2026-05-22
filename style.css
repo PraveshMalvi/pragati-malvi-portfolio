@@ -1,0 +1,971 @@
+:root{
+    --blue-color: #2563EB;
+    --gray-color: #64748B;
+    --light-gray-color: #e2e2e2;
+    --bg-color: #f8fafc;
+    --dark-bg-color: #0f172a;
+    --text-color: #191C1E;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+::-webkit-scrollbar{
+    width: 10px;
+}
+::-webkit-scrollbar-track{
+    background: var(--bg-color);
+}
+::-webkit-scrollbar-thumb{
+    background: #6d6d6d;
+    border-radius: 10px;
+    cursor: pointer;
+}
+::-webkit-scrollbar-thumb:hover{
+    background: #9f9f9f;
+}
+
+body{
+    background-color: var(--bg-color) !important;
+    color: var(--text-color);
+    overflow-x: hidden;
+}
+
+/* ==================== Section 0: Base & Utilities ==================== */
+/* common css start */
+
+.text-gradient {
+    /* The blue to purple linear gradient */
+    background: linear-gradient(145deg, #0076FF, #8900FF);
+    
+    /* Clips the background image to the foreground text */
+    -webkit-background-clip: text;
+    background-clip: text;
+    
+    /* Makes the actual text color transparent so the background shows through */
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+}
+.text-green{
+    color: #00d150;
+}
+.text-purple{
+    color: #8900FF;
+}
+.personal-quote{
+    border-top: 2px solid var(--light-gray-color);
+    border-bottom: 2px solid var(--light-gray-color);
+    margin-top: 4rem;
+    padding: 1.5rem 0;
+}
+
+/* common css end */
+
+/* ------------------------------------------------------------- */
+
+/* ==================== Section 1: Navbar ==================== */
+/* navbar */
+
+.logo a{
+    font-family: "Inter", sans-serif;
+    font-weight: 800;
+    font-size: 1.5rem;
+}
+header, .navbar {
+    /* 1. Semi-transparent background color using alpha (rgba or hex with alpha) */
+    background-color: rgba(248, 250, 252, 0.4); 
+    
+    /* 2. The frosted glass blur effect */
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+    
+    /* 3. A subtle border to define the edge of the glass */
+    border-bottom: 1px solid rgba(216, 216, 216, 0.2);
+    
+    /* 4. Crucial if this is a sticky/fixed header floating over content */
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+.nav-links{
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+.nav-links li a{
+    font-family: "JetBrains Mono", monospace;
+    transition: all 0.3s ease;
+}
+.nav-links li a:hover, .nav-links li a.active{
+    background: linear-gradient(145deg, #0076FF, #8900FF);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+}
+
+/* ==================== Hero Section ==================== */
+/* hero section */
+
+.hero-section{
+    width: 100%;
+    height: 90vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.hero-content{
+    max-width: 60%;
+    height: 100%;
+    margin: 0 auto;
+    text-align: center;  
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: .3rem;
+}
+.hero-content h1{
+    font-weight: 900;
+    font-size: 3.5rem;
+}
+.hero-content p{
+    font-weight: 400;
+    font-size: 1.2rem;
+}
+.hero-btns{
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.hero-btns span{
+    padding: .5rem 1rem;
+    background-color: var(--bg-color);
+    color: #000000;
+    font-weight: 500;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    box-shadow: 1px 5px 10px rgba(0, 0, 0, 0.1);
+    border: 1px solid #eeeeee;
+    font-size: .8rem;
+    font-family: "JetBrains Mono", monospace;
+}
+
+/* ==================== Section 2: Numbers Matter ==================== */
+/* section-2 */
+
+.section-header-dark h2{
+    font-size: 4rem;
+    font-weight: 900;
+    color: #ffffff;
+}
+.section-header-dark p:nth-child(2){
+    font-size: 1.5rem;
+    max-width: 60%;
+}
+.section-header-dark p:nth-child(3){
+    font-size: 1rem;
+    max-width: 60%;
+    padding-left: 1rem;
+}
+
+.section-header h2{
+    font-size: 4rem;
+    font-weight: 900;
+}
+.section-header p:nth-child(2){
+    font-size: 1.5rem;
+    max-width: 60%;
+}
+.section-header p:nth-child(3){
+    font-size: 1rem;
+    max-width: 60%;
+    padding-left: 1rem;
+}
+.circular-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.circular-progress {
+  position: relative;
+  width: 110px;
+  height: 110px;
+  border-radius: 50%;
+  /* conic-gradient handles the precise 61% filled fill-percentage */
+  background: conic-gradient(
+    var(--blue-color) calc(61 * 1%), 
+    var(--light-gray-color) 0
+  );
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* This pseudo-element creates the inner cutout to make it a hollow ring/donut chart */
+.circular-progress::before {
+  content: "";
+  position: absolute;
+  width: 86px;
+  height: 86px;
+  border-radius: 50%;
+  background-color: #ffffff; /* Matches your card background */
+}
+
+/* Ensures the percentage text sits cleanly over the center mask */
+.progress-value {
+  position: relative;
+  font-family: sans-serif;
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: #0b132a;
+}
+
+/* ==================== Section 3: Problems I Enjoy Solving / Super-sourcing ==================== */
+/* supersourcing section */
+
+
+.x-small { font-size: 0.65rem; }
+
+/* Micro-interaction Hover Effects */
+.metric-box {
+  transition: transform 0.3s cubic-bezier(0.25, 1, 0.5, 1), box-shadow 0.3s ease;
+}
+
+.metric-box:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1) !important;
+  border-color: var(--primary-color) !important;
+}
+
+.execution-item i {
+  transition: transform 0.2s ease;
+}
+
+.execution-item:hover i {
+  transform: scale(1.2);
+}
+
+/* Entry Animations */
+.animate-fade-in {
+  animation: fadeIn 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.animate-slide-left {
+  animation: slideLeft 1s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.animate-slide-right {
+  animation: slideRight 1s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slideLeft {
+  from { opacity: 0; transform: translateX(-30px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes slideRight {
+  from { opacity: 0; transform: translateX(30px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+
+/* Mobile Media Query Enhancements */
+@media (max-width: 767px) {
+  .tactical-card {
+    padding: 2rem !important; /* Drops excessive padding on compact mobile viewports */
+  }
+  .metric-row {
+    margin-top: 0.5rem;
+  }
+}
+
+
+/* ==================== Section 5: Enterprise SEO ==================== */
+/* enterprise-seo-section */
+
+
+/* Structural Styling for Left Side Cards */
+.challenge-card {
+  border-color: var(--border-muted) !important;
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.3s ease;
+}
+
+.challenge-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.03) !important;
+  border-color: var(--brand-blue) !important;
+}
+
+.challenge-card .icon-wrapper {
+  width: 40px;
+  height: 40px;
+  background-color: transparent;
+}
+
+/* Structural Styling for Right Side Container */
+.outcomes-container {
+  background-color: var(--bg-outcomes-gray);
+  border-color: var(--border-muted) !important;
+}
+
+.outcome-icon-circle {
+  width: 48px;
+  height: 48px;
+  background-color: var(--icon-circle-bg);
+  transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+/* Micro-interaction for Outcomes Rows */
+.outcome-row {
+  cursor: default;
+}
+
+.outcome-row:hover .outcome-icon-circle {
+  background-color: var(--blue-color);
+  color: #ffffff !important;
+  transform: scale(1.05);
+}
+
+/* Core Fade-In Animations */
+.animate-fade-in {
+  animation: seoFadeIn 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+@keyframes seoFadeIn {
+  from { opacity: 0; transform: translateY(15px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Mobile Responsiveness Rules */
+@media (max-width: 1199px) {
+  .outcomes-container {
+    margin-top: 1rem; /* Balances spacing when containers collapse into vertical stacks */
+  }
+}
+
+@media (max-width: 576px) {
+  .outcomes-container {
+    padding: 2rem 1.5rem !important;
+  }
+  .outcome-row {
+    gap: 1rem !important; /* Tightens text spacing slightly on narrow mobile viewports */
+  }
+}
+
+
+.focus-card {
+  border-color: #e2e8f0 !important;
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.3s ease;
+}
+
+/* Subtle, clean offset animation on card hover */
+.focus-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.04) !important;
+}
+
+/* section 6 */
+/* Context Card Formatting */
+.project-context-card {
+  background-color: var(--bg-neutral-light);
+  border-color: var(--border-color) !important;
+}
+
+/* Pillar Checklist Micro-interactions */
+.pillar-item {
+  background-color: var(--bg-neutral-light);
+  border-color: var(--border-color) !important;
+  transition: background-color 0.25s ease, border-color 0.25s ease, transform 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.pillar-item:hover {
+  background-color: #ffffff;
+  border-color: var(--brand-blue-accent) !important;
+  transform: translateX(4px);
+  box-shadow: 0 4px 12px rgba(43, 110, 255, 0.05);
+}
+
+.pillar-icon {
+  width: 32px;
+  height: 32px;
+}
+
+/* section 7 */
+
+/* Color Palette Archetypes */
+.text-cyan { color: #38bdf8; }
+.text-purple { color: #a855f7; }
+.text-green { color: #10b981; }
+.dark-track-bg { background-color: #111827 !important; }
+
+/* Micro-Tag Styles & Hover Fluid Scaling */
+.frontier-tag {
+  background-color: #0b1329;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  cursor: default;
+}
+
+.frontier-tag:hover {
+  background-color: #111e3d;
+  border-color: #334155 !important;
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(56, 189, 248, 0.05);
+}
+
+/* Glassmorphism AI Terminal Box Styling */
+.ai-terminal-window {
+  background: linear-gradient(145deg, #0f172a, #070a13);
+  border: 1px solid #1e293b;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5) !important;
+}
+
+.terminal-header-dots .dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+/* Color definitions for utility components */
+.bg-blue { background-color: #3b82f6 !important; }
+.bg-purple { background-color: #a855f7 !important; }
+.bg-green { background-color: #10b981 !important; }
+
+/* Custom Script Injection Simulation for Progress Bars */
+.animate-bar {
+  animation: loadSyntaxBars 1.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  animation-delay: 0.2s;
+}
+
+@keyframes loadSyntaxBars {
+  from { width: 0%; }
+  to { width: var(--final-width); }
+}
+
+/* Dynamic styling declarations matching HTML inline calls */
+.animate-bar[data-width="85%"] { --final-width: 85%; }
+.animate-bar[data-width="92%"] { --final-width: 92%; }
+.animate-bar[data-width="78%"] { --final-width: 78%; }
+
+/* Background Visualizer Mesh */
+.ambient-glow-layer {
+  position: absolute;
+  top: 30%;
+  right: -10%;
+  width: 500px;
+  height: 500px;
+  background: radial-gradient(circle, rgba(43, 110, 255, 0.08) 0%, rgba(3, 7, 18, 0) 70%);
+  z-index: 1;
+  pointer-events: none;
+}
+
+/* Mobile Layout Responsive Adaptations */
+@media(max-width: 991px) {
+  .ai-terminal-window {
+    margin-top: 2rem;
+  }
+}
+
+@media(max-width: 576px) {
+  .ai-terminal-window {
+    padding: 2rem 1.5rem !important;
+  }
+}
+
+/* section 8 */
+
+/* Card Container Layout Extensions */
+.evolution-card {
+  background: linear-gradient(145deg, #0f172a, #070a13); /* Reuses the terminal glass tint */
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Fluid transformation lift on hover */
+.evolution-card:hover {
+  transform: scale(1.02);
+  border-color: #334155 !important;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4) !important;
+}
+
+/* Quick responsive tracking override for grid items on tight viewports */
+@media (max-width: 767px) {
+  .evolution-card {
+    padding: 2rem 1.5rem !important;
+  }
+}
+
+/* section 9 */
+
+/* Token Reuse & Overrides */
+
+/* Structural Card Blueprint */
+.insight-card {
+  border-color: #e2e8f0 !important;
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.3s ease;
+}
+
+/* Micro-Interaction Hover Response */
+.insight-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.04) !important;
+}
+
+/* Internal Card Accent Tweaks */
+.insight-card .insight-icon {
+  width: 32px;
+  height: 32px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.insight-card hr {
+  opacity: 0.15;
+}
+
+/* Tight Viewport Mobile Optimization overrides */
+@media (max-width: 767px) {
+  .insight-card {
+    padding: 2rem 1.5rem !important;
+  }
+}
+
+/* section 10 */
+
+.leading-normal { line-height: 1.5; }
+
+/* Light Theme Card Base Styling */
+.bg-light-card {
+  background-color: var(--bg-light-gray-card);
+}
+
+.tech-solver-card {
+  border-color: var(--border-muted-gray) !important;
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), 
+              border-color 0.3s ease, 
+              background-color 0.25s ease,
+              box-shadow 0.3s ease;
+}
+
+/* Micro-Interaction Profile Match */
+.tech-solver-card:hover {
+  background-color: #ffffff;
+  transform: translateY(-4px);
+  border-color: var(--brand-interactive-blue) !important;
+  box-shadow: 0 12px 24px rgba(43, 110, 255, 0.04) !important;
+}
+
+.tech-icon-box {
+  width: 40px;
+  height: 40px;
+  background-color: transparent;
+}
+
+/* Mobile Layout Padding Normalizations */
+@media (max-width: 576px) {
+  .tech-solver-card {
+    padding: 1.75rem 1.5rem !important;
+  }
+}
+
+/* section 11 */
+
+/* Reused Dark Theme Tokens Integration */
+.bg-dark-slate { background-color: #030712; }
+.text-gray { color: #94a3b8; }
+
+/* Structural Timeline Logic */
+.timeline-container {
+  padding: 2rem 0;
+}
+
+.timeline-connector-line {
+  position: absolute;
+  top: 42px; /* Centers vector perfectly through horizontal square boxes */
+  left: 5%;
+  right: 5%;
+  height: 1px;
+  background-color: rgba(255, 255, 255, 0.12);
+  z-index: 1;
+}
+
+/* Step Node Core Sizing & Neon Framing */
+.os-step-box {
+  width: 52px;
+  height: 52px;
+  background-color: #0b1329;
+  border: 2px solid transparent;
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.3s ease;
+  z-index: 5;
+}
+
+/* Custom Neon Glow Alignments */
+.glow-blue { 
+  border-color: #3b82f6 !important; 
+  box-shadow: 0 0 12px rgba(59, 130, 246, 0.3);
+}
+.glow-purple { 
+  border-color: #a855f7 !important; 
+  box-shadow: 0 0 12px rgba(168, 85, 247, 0.3);
+}
+.glow-green { 
+  border-color: #10b981 !important; 
+  box-shadow: 0 0 12px rgba(16, 185, 129, 0.3);
+}
+
+/* Interactive Hover States */
+.step-node {
+  cursor: default;
+}
+
+.step-node:hover .os-step-box {
+  transform: translateY(-4px) scale(1.08);
+}
+
+.step-node:hover .glow-blue { box-shadow: 0 0 20px rgba(59, 130, 246, 0.6); }
+.step-node:hover .glow-purple { box-shadow: 0 0 20px rgba(168, 85, 247, 0.6); }
+.step-node:hover .glow-green { box-shadow: 0 0 20px rgba(16, 185, 129, 0.6); }
+
+/* Responsive Grid Split Engine for 5 Elements */
+@media (min-width: 768px) {
+  .col-md-2-custom {
+    flex: 0 0 20%;
+    max-width: 20%;
+  }
+}
+
+/* Mobile & Tablet Refinements */
+@media (max-width: 767px) {
+  .timeline-container {
+    padding: 0;
+  }
+  .step-node {
+    margin-bottom: 2rem; /* Adds balanced vertical breaks when steps collapse */
+  }
+  .step-node:last-child {
+    margin-bottom: 0;
+  }
+}
+
+/* section 12 */
+
+/* Structural Grid Extensions */
+.workflow-tool-card {
+  background: linear-gradient(145deg, #0f172a, #070a13);
+  min-height: 140px;
+  transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1), 
+              border-color 0.25s ease, 
+              box-shadow 0.25s ease;
+}
+
+/* Fluid Hover Interface Lift */
+.workflow-tool-card:hover {
+  transform: translateY(-5px);
+  border-color: #334155 !important;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.4) !important;
+}
+
+/* Micro-Font-Scaling Engine to keep titles locked cleanly */
+.tool-title {
+  font-size: 0.68rem;
+  line-height: 1.4;
+  color: #94a3b8;
+  letter-spacing: 0.08em;
+}
+
+.workflow-tool-card:hover .tool-title {
+  color: #e2e8f0;
+}
+
+/* Adjustments for tight smartphone breakpoints */
+@media (max-width: 575px) {
+  .workflow-tool-card {
+    min-height: 120px;
+    padding: 1.5rem 1rem !important;
+  }
+  .tool-title {
+    font-size: 0.65rem;
+  }
+}
+
+/* section 13 */
+
+/* Color & Typography Token Layout Fallbacks */
+.bg-brand-blue { background-color: #0056e2 !important; } /* Reuses your main identity case study blue */
+.text-blue-muted { color: #93c5fd; }
+.text-light-gray { color: #94a3b8; }
+.text-white-80 { color: rgba(255, 255, 255, 0.85); }
+
+/* Stack Container Blueprint */
+.pyramid-stack {
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.06) !important;
+  transition: all 0.4s ease;
+}
+
+/* Base Layer Blueprint Rules */
+.pyramid-layer {
+  position: relative;
+  z-index: 2;
+  border-bottom: 2px solid rgba(255, 255, 255, 0.1);
+  transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), 
+              box-shadow 0.35s cubic-bezier(0.16, 1, 0.3, 1), 
+              opacity 0.3s ease, 
+              z-index 0s linear;
+}
+
+.pyramid-layer:last-child {
+  border-bottom: none;
+}
+
+/* 3D Depth Hover Interactions */
+.pyramid-layer:hover {
+  z-index: 10; /* Lifts the row safely above clipping borders */
+  transform: scale(1.03);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+}
+
+/* Specific Shadow Tweaks based on Layer Color Profiles */
+.layer-top:hover {
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+}
+.layer-middle:hover {
+  box-shadow: 0 20px 40px rgba(0, 86, 226, 0.25);
+}
+.layer-bottom:hover {
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
+}
+
+/* Intelligent Sibling Dimming on Hover */
+.pyramid-stack:hover .pyramid-layer:not(:hover) {
+  opacity: 0.65;
+  transform: scale(0.99);
+}
+
+/* Text Pop Animation States within Hovered Element */
+.pyramid-layer .layer-title,
+.pyramid-layer .layer-desc {
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.pyramid-layer:hover .layer-title {
+  transform: translateY(-2px);
+}
+
+/* Mobile Viewport Adjustments */
+@media (max-width: 767px) {
+  .pyramid-layer {
+    padding: 2.5rem 1.5rem !important;
+  }
+  .pyramid-layer:hover {
+    transform: scale(1.01); /* Tone down expansion scales on narrow screens */
+  }
+}
+
+
+/* section 14 */
+
+
+/* Token Reuse Framework Fallbacks */
+.lead-normal { line-height: 1.7; font-size: 1.08rem; }
+.line-height-1 { line-height: 1; }
+.bg-light-card { background-color: #f8fafc; }
+
+/* Structural Right Card Blueprint */
+.focus-matrix-card {
+  border-color: #e2e8f0 !important;
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), 
+              box-shadow 0.3s ease, 
+              border-color 0.3s ease;
+}
+
+/* Micro-Interaction Card Lifts */
+.focus-matrix-card:hover {
+  transform: translateY(-4px);
+  border-color: #cbd5e1 !important;
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.04) !important;
+}
+
+/* Focus Node Transitions */
+.focus-item-node {
+  transition: transform 0.2s ease;
+}
+
+.focus-item-node:hover {
+  transform: translateX(4px);
+}
+
+.focus-icon-wrapper {
+  min-width: 28px;
+  display: inline-flex;
+  justify-content: center;
+}
+
+/* Responsive Structural Refinement Hooks */
+@media (max-width: 991px) {
+  .biography-narrative {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .stat-counter-row {
+    gap: 3.5rem !important;
+  }
+  .focus-matrix-card {
+    padding: 2.25rem 1.5rem !important;
+  }
+}
+
+/* section 15 */
+
+/* Color Palette & Font-Family Utilities */
+.leading-relaxed { line-height: 1.6; }
+
+/* Section Base Background Layer */
+.cta-compounds-section {
+  padding: 4rem 0;
+}
+
+/* Primary Filled CTA Button Engine styling */
+.btn-brand-blue-filled {
+  background-color: #0056e2 !important; /* Reuses your exact identity blue token */
+  border: 1px solid #0056e2 !important;
+  min-width: 200px;
+  box-shadow: 0 4px 14px rgba(0, 86, 226, 0.2);
+  transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1), 
+              background-color 0.2s ease, 
+              box-shadow 0.25s ease !important;
+}
+
+.btn-brand-blue-filled:hover {
+  background-color: #004ac2 !important;
+  border-color: #004ac2 !important;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(0, 86, 226, 0.4) !important;
+}
+
+.btn-brand-blue-filled:active {
+  transform: translateY(0);
+}
+
+/* Secondary Ghost Border Button Outline Styling */
+.btn-outline-ghost {
+  background-color: transparent !important;
+  border: 1px solid rgba(255, 255, 255, 0.15) !important;
+  min-width: 200px;
+  transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1), 
+              border-color 0.2s ease, 
+              background-color 0.2s ease !important;
+}
+
+.btn-outline-ghost:hover {
+  background-color: rgba(255, 255, 255, 0.04) !important;
+  border-color: rgba(255, 255, 255, 0.35) !important;
+  transform: translateY(-2px);
+}
+
+.btn-outline-ghost:active {
+  transform: translateY(0);
+}
+
+/* Smooth Responsive Tweaks for Smaller Layout Interfaces */
+@media (max-width: 575px) {
+  .execution-buttons,
+  .btn-brand-blue-filled,
+  .btn-outline-ghost {
+    width: 100%; /* Stacks beautifully full-width on tight viewports */
+    max-width: 280px;
+  }
+  .cta-title {
+    font-size: 1.85rem !important;
+  }
+}
+
+/* ==================== Section 17: Footer ==================== */
+
+/* Dark UI Variable Mappings */
+.border-dark-glow { border-color: #3b537a !important; }
+.font-jetbrains { font-family: 'JetBrains Mono', monospace, sans-serif; }
+.text-blue { color: #3b82f6 !important; }
+.text-muted-gray { color: #64748b; }
+
+.global-navbar{
+  border-top: 1px solid #0f172a;
+}
+
+/* Typography Precision Tuning */
+.fw-black { font-weight: 900; }
+.brand-logo {
+  font-size: 1.5rem;
+  letter-spacing: -0.02em;
+}
+
+.brand-subheading {
+  font-size: 0.8rem;
+  letter-spacing: 0.18em;
+  word-spacing: 0.05em;
+}
+
+/* Nav Link Interaction Architecture */
+.nav-links-wrapper {
+  font-size: 0.95rem;
+}
+
+.nav-item-link {
+  color: #94a3b8 !important;
+  position: relative;
+  padding: 0.25rem 0;
+  transition: color 0.25s ease;
+}
+
+/* Slide-in Indicator Line Hover Effect */
+.nav-item-link::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: #3b82f6;
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.nav-item-link:hover {
+  color: #ffffff !important;
+}
+
+.nav-item-link:hover::after {
+  transform: scaleX(1);
+  transform-origin: left;
+}
+
+/* Mobile Layout Responsive Refinements */
+@media (max-width: 575px) {
+  .global-navbar {
+    padding: 1rem 0 !important;
+  }
+  .brand-logo {
+    font-size: 1.25rem;
+  }
+  .brand-subheading {
+    font-size: 0.55rem;
+    letter-spacing: 0.12em;
+  }
+  .nav-links-wrapper {
+    gap: 1.25rem !important;
+    font-size: 0.85rem;
+  }
+}
