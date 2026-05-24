@@ -463,7 +463,7 @@ header, .navbar {
 .animate-bar[data-width="78%"] { --final-width: 78%; }
 
 /* Background Visualizer Mesh */
-.ambient-glow-layer {
+/* .ambient-glow-layer {
   position: absolute;
   top: 30%;
   right: 2rem;
@@ -474,7 +474,7 @@ header, .navbar {
   background: radial-gradient(circle, rgba(43, 110, 255, 0.08) 0%, rgba(3, 7, 18, 0) 70%);
   z-index: 1;
   pointer-events: none;
-}
+} */
 
 /* Mobile Layout Responsive Adaptations */
 @media(max-width: 991px) {
