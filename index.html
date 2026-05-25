@@ -4,7 +4,6 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Portfolio: Pragati Malvi</title>
-    <link rel="stylesheet" href="./style.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -17,6 +16,7 @@
       integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
       crossorigin="anonymous"
     />
+    <link rel="stylesheet" href="./style.css" />
     <link
       href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
       rel="stylesheet"
@@ -36,9 +36,12 @@
     ></script>
   </head>
   <body>
+    <div id="scrollToTop" class="click-to-top">
+      <i class="fa-solid fa-arrow-up"></i>
+    </div>
     <!-- Header/NavBar -->
     <header>
-      <nav class="navbar navbar-expand-lg py-2">
+      <nav class="navbar navbar-expand-xl py-2">
         <div class="container p-0">
           <div class="logo">
             <a
@@ -66,29 +69,32 @@
           </button>
 
           <div class="collapse navbar-collapse sm-menu" id="mainNavbar">
-            <ul class="navbar-nav ms-auto nav-links">
+            <ul class="navbar-nav ms-auto nav-links gap-3">
               <li class="nav-item">
                 <a class="nav-link active" href="index.html">Home</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#services">Services</a>
+                <a class="nav-link" href="#case-study">Case Study</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#about">About</a>
+                <a class="nav-link" href="#whats-next">What's Next</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#testimonials">Testimonials</a>
+                <a class="nav-link" href="#expertise">Expertise</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#contact">Contact Us</a>
+                <a class="nav-link" href="#system">My OS</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#contact">Get in Touch</a>
               </li>
             </ul>
           </div>
         </div>
       </nav>
     </header>
-    <!-- hero section -->
-    <section class="hero-section">
+    <!-- section 1 -->
+    <section class="hero-section py-5 my-5">
       <div class="container">
         <div class="hero-content">
           <h1>
@@ -108,7 +114,7 @@
           </div>
           <p class="mt-4">
             6+ years experience across startups, agencies, and enterprise. I
-            don't just "get pages to rank"—I build systems that drive growth.
+            don't just "get pages to rank", I build systems that drive growth.
           </p>
         </div>
       </div>
@@ -190,7 +196,7 @@
                     </div>
                     <h3 class="fw-bold text-dark mb-2">25x</h3>
                     <p class="text-dark mb-0">
-                      ICP lead growth through intent-first content clusters.
+                      ICP lead growth through intent-first content.
                     </p>
                   </div>
                 </div>
@@ -310,19 +316,19 @@
 
     <!-- section 4 -->
 
-    <section class="case-study-section py-5 bg-dark-slate">
+    <section id="case-study" class="case-study-section py-5 bg-dark-slate">
       <div class="container my-4">
         <div class="row mb-5">
           <div class="col-12 animate-fade-in">
             <p
               class="text-uppercase text-gradient fw-bold ls-3 font-jetbrains text-center text-sm-start"
             >
-              Case Study
+              Case Study - 1
             </p>
             <h1
               class="fs-1 fw-black text-white mt-2 mb-4 text-center text-sm-start"
             >
-              Supersourcing: <br />
+              <span class="text-gradient">Supersourcing:</span> <br />
               When More Traffic Wasn't the Answer
             </h1>
           </div>
@@ -357,8 +363,8 @@
                 Startup Context: Hirium
               </span>
               <p class="text-white mb-0 legacy-text">
-                I was also part of a startup environment where growth and
-                product often overlapped. During this period, I supported growth
+                I was also part of an environment where growth and product often
+                overlapped. During this period, I supported SEO and growth
                 initiatives around Hirium while the ATS platform was still being
                 built and launched.
               </p>
@@ -404,6 +410,10 @@
                     <span class="text-white"
                       >Introduced MQL-focused reporting</span
                     >
+                  </div>
+                  <div class="execution-item d-flex align-items-start gap-2">
+                    <i class="fa-solid fa-check-double text-primary mt-1"></i>
+                    <span class="text-white">Implemented CRO elements</span>
                   </div>
                 </div>
               </div>
@@ -474,9 +484,14 @@
       <div class="container my-4">
         <div class="row mb-5 animate-fade-in">
           <div class="col-12">
+            <p
+              class="text-uppercase text-gradient fw-bold ls-3 font-jetbrains text-center text-sm-start"
+            >
+              Case Study - 2
+            </p>
             <h1 class="fs-1 fw-black text-dark mb-3 text-center text-sm-start">
-              Enterprise SEO Taught Me: <br />
-              That Scale Changes Everything
+              <span class="text-gradient">Impellam Group:</span> <br />
+              Enterprise SEO Taught Me That Scale Changes Everything
             </h1>
             <p
               class="fs-5 text-dark leading-relaxed mb-0 text-center text-sm-start"
@@ -628,13 +643,13 @@
         </div>
 
         <div class="row g-4 justify-content-center pt-4">
-          <div class="col-12 col-md-6 d-flex">
+          <div class="col-12 col-lg-6 d-flex">
             <div
-              class="card w-100 p-4 p-sm-5 border border-light-subtle rounded-4 bg-white shadow-sm transition-all focus-card"
+              class="card w-100 p-4 border border-light-subtle rounded-4 bg-white shadow-sm transition-all focus-card"
             >
               <div class="card-body p-0">
                 <div class="d-flex align-items-center gap-3 mb-4 text-primary">
-                  <i class="fa-solid fa-chart-line fs-5"></i>
+                  <i class="fa-solid fa-arrow-trend-up"></i>
                   <h4 class="card-title text-gradient m-0 fs-5 font-jetbrains">
                     Outcomes
                   </h4>
@@ -649,7 +664,7 @@
                     ></i>
                     <span class="text-dark"
                       ><strong class="fw-bold"
-                        >61% Search visibility growth</strong
+                        >61% Search visibility growth across brands</strong
                       ></span
                     >
                   </li>
@@ -667,7 +682,7 @@
                     <i
                       class="fa-regular fa-circle-check text-primary fs-6 mt-1"
                     ></i>
-                    <span>Clearer attribution</span>
+                    <span>Clearer attribution through tracking governance</span>
                   </li>
                   <li
                     class="d-flex align-items-start gap-3 text-dark execution-item"
@@ -681,7 +696,20 @@
               </div>
             </div>
           </div>
-          <div class="col-12 col-md-6 d-flex">
+          <div class="col-12 col-lg-6">
+            <div class="bg-white rounded-3 p-2 focus-card shadow-sm h-100">
+              <h4 class="text-gradient m-0 fs-5 font-jetbrains pt-3 pb-2 ps-2">
+                <i class="fa-solid fa-chart-area"></i>
+                Visibility Growth
+              </h4>
+              <img
+                src="./assets/images/brand-analysis.png"
+                alt="brand-analysis"
+                class="img-fluid"
+              />
+            </div>
+          </div>
+          <div class="col-12">
             <div class="text-dark text-center display-6 mt-3">
               <p>
                 <i>
@@ -704,7 +732,12 @@
             <p
               class="text-uppercase text-gradient fw-bold ls-3 font-jetbrains text-center text-sm-start"
             >
-              Flagship Engagement
+              My Current Project -
+            </p>
+            <p
+              class="text-uppercase text-black fw-bold ls-3 font-jetbrains text-center text-sm-start"
+            >
+              Flagship Engagement At Impellam
             </p>
             <h1
               class="fs-1 fw-black text-dark mt-2 mb-3 text-center text-sm-start"
@@ -904,6 +937,7 @@
     <!-- section 8 -->
 
     <section
+      id="whats-next"
       class="next-frontier-section py-4 bg-dark-slate text-white position-relative overflow-hidden"
     >
       <div class="container my-5 position-relative z-index-2">
@@ -1046,6 +1080,7 @@
     <!-- section 9 -->
 
     <section
+      id="perspective"
       class="evolution-section py-2 bg-dark-slate text-white position-relative overflow-hidden"
     >
       <div class="container my-5 position-relative z-index-2">
@@ -1103,9 +1138,9 @@
                 SEO problems
               </h4>
               <p class="text-gray leading-relaxed mb-0">
-                SEO problems often aren't SEO problems, i used to see SEO as a
-                siloed set of tasks. Now I see them as business problems—revenue
-                leaks, user friction, and brand visibility gaps.
+                SEO problems often aren't SEO problems, I used to see SEO as a
+                siloed set of tasks. Now I see them as business problems,
+                revenue leaks, user friction, and brand visibility gaps.
               </p>
               <p class="text-gray leading-relaxed mb-0 mt-3 fs-5">
                 <i>
@@ -1152,8 +1187,8 @@
               </h4>
               <p class="text-gray leading-relaxed mb-0">
                 Search is becoming broader than search engines. I used to focus
-                solely on the SERP. Now I look at the entire ecosystem—Reddit,
-                YouTube, AI overviews—and ask where the conversation is
+                solely on the SERP. Now I look at the entire ecosystem, Reddit,
+                YouTube, AI overviews, and ask where the conversation is
                 happening.
               </p>
               <p class="text-gray leading-relaxed mb-0 mt-3 fs-5">
@@ -1169,7 +1204,7 @@
 
     <!-- section 10 -->
 
-    <section class="learned-noticed-section py-5 bg-light">
+    <section id="expertise" class="learned-noticed-section py-5 bg-light">
       <div class="container my-4">
         <div class="row mb-5 text-center">
           <div class="col-12 animate-fade-in">
@@ -1289,7 +1324,7 @@
                     >What Stuck:</span
                   >
                   <p class="text-dark fw-semibold mb-0">
-                    Patience isn't passive—it often means educating and holding
+                    Patience isn't passive it often means educating and holding
                     your ground.
                   </p>
                 </div>
@@ -1457,6 +1492,7 @@
     <!-- section 12 -->
 
     <section
+      id="system"
       class="seo-os-section pt-4 bg-dark-slate text-white position-relative overflow-hidden"
     >
       <div class="container my-5">
@@ -1488,8 +1524,8 @@
               >
                 <span class="font-jetbrains fw-bold h5 mb-0 text-white">1</span>
               </div>
-              <h5 class="fw-bold text-white mb-1">Identify</h5>
-              <span class="text-gray px-2">Mining search logs & intent</span>
+              <h5 class="fw-bold text-white mb-1">Discovery</h5>
+              <!-- <span class="text-gray px-2">Mining search logs & intent</span> -->
             </div>
 
             <div
@@ -1500,8 +1536,8 @@
               >
                 <span class="font-jetbrains fw-bold h5 mb-0 text-white">2</span>
               </div>
-              <h5 class="fw-bold text-white mb-1">Prioritize</h5>
-              <span class="text-gray px-2">Applying ICE frameworks</span>
+              <h5 class="fw-bold text-white mb-1">Strategy</h5>
+              <!-- <span class="text-gray px-2">Applying ICE frameworks</span> -->
             </div>
 
             <div
@@ -1512,8 +1548,8 @@
               >
                 <span class="font-jetbrains fw-bold h5 mb-0 text-white">3</span>
               </div>
-              <h5 class="fw-bold text-white mb-1">Build</h5>
-              <span class="text-gray px-2">Rapid content cycles</span>
+              <h5 class="fw-bold text-white mb-1">Execution</h5>
+              <!-- <span class="text-gray px-2">Rapid content cycles</span> -->
             </div>
 
             <div
@@ -1524,8 +1560,8 @@
               >
                 <span class="font-jetbrains fw-bold h5 mb-0 text-white">4</span>
               </div>
-              <h5 class="fw-bold text-white mb-1">Measure</h5>
-              <span class="text-gray px-2">MQL-first attribution</span>
+              <h5 class="fw-bold text-white mb-1">Measurement</h5>
+              <!-- <span class="text-gray px-2">MQL-first attribution</span> -->
             </div>
 
             <div
@@ -1536,8 +1572,20 @@
               >
                 <span class="font-jetbrains fw-bold h5 mb-0 text-white">5</span>
               </div>
-              <h5 class="fw-bold text-white mb-1">Learn</h5>
-              <span class="text-gray px-2">Feeding insights back</span>
+              <h5 class="fw-bold text-white mb-1">AI Acceleration</h5>
+              <!-- <span class="text-gray px-2">Feeding insights back</span> -->
+            </div>
+
+            <div
+              class="col-12 col-lg-2 text-center d-flex flex-column align-items-center step-node"
+            >
+              <div
+                class="os-step-box rounded-3 d-flex align-items-center justify-content-center mb-3 glow-purple"
+              >
+                <span class="font-jetbrains fw-bold h5 mb-0 text-white">6</span>
+              </div>
+              <h5 class="fw-bold text-white mb-1">Learning</h5>
+              <!-- <span class="text-gray px-2">Feeding insights back</span> -->
             </div>
           </div>
         </div>
@@ -1561,7 +1609,7 @@
         <div class="row g-3 justify-content-center">
           <div class="col-6 col-md-4 col-xl-2 d-flex">
             <div
-              class="workflow-tool-card w-100 p-4 rounded-3 border border-dark-glow d-flex flex-column align-items-center justify-content-center text-center"
+              class="workflow-tool-card w-100 p-4 rounded-3 d-flex flex-column align-items-center justify-content-center text-center"
             >
               <div class="tool-icon text-blue fs-3 mb-3">
                 <i class="fa-solid fa-table-cells-large"></i>
@@ -1576,7 +1624,7 @@
 
           <div class="col-6 col-md-4 col-xl-2 d-flex">
             <div
-              class="workflow-tool-card w-100 p-4 rounded-3 border border-dark-glow d-flex flex-column align-items-center justify-content-center text-center"
+              class="workflow-tool-card w-100 p-4 rounded-3 d-flex flex-column align-items-center justify-content-center text-center"
             >
               <div class="tool-icon text-purple fs-3 mb-3">
                 <i class="fa-solid fa-diagram-successor"></i>
@@ -1591,10 +1639,10 @@
 
           <div class="col-6 col-md-4 col-xl-2 d-flex">
             <div
-              class="workflow-tool-card w-100 p-4 rounded-3 border border-dark-glow d-flex flex-column align-items-center justify-content-center text-center"
+              class="workflow-tool-card w-100 p-4 rounded-3 d-flex flex-column align-items-center justify-content-center text-center"
             >
               <div class="tool-icon text-green fs-3 mb-3">
-                <i class="fa-solid fa-route"></i>
+                <i class="fa-solid fa-link"></i>
               </div>
               <span
                 class="font-jetbrains small fw-bold tracking-wider text-uppercase tool-title"
@@ -1606,25 +1654,25 @@
 
           <div class="col-6 col-md-4 col-xl-2 d-flex">
             <div
-              class="workflow-tool-card w-100 p-4 rounded-3 border border-dark-glow d-flex flex-column align-items-center justify-content-center text-center"
+              class="workflow-tool-card w-100 p-4 rounded-3 d-flex flex-column align-items-center justify-content-center text-center"
             >
-              <div class="tool-icon text-blue fs-3 mb-3">
-                <i class="fa-solid fa-table-cells"></i>
+              <div class="tool-icon text-warning fs-3 mb-3">
+                <i class="fa-solid fa-arrows-turn-to-dots"></i>
               </div>
               <span
                 class="font-jetbrains small fw-bold tracking-wider text-uppercase tool-title"
               >
-                ICE Priority Sheets
+                Redirect Frameworks
               </span>
             </div>
           </div>
 
           <div class="col-12 col-sm-6 col-md-4 col-xl-2 d-flex">
             <div
-              class="workflow-tool-card w-100 p-4 rounded-3 border border-dark-glow d-flex flex-column align-items-center justify-content-center text-center"
+              class="workflow-tool-card w-100 p-4 rounded-3 d-flex flex-column align-items-center justify-content-center text-center"
             >
-              <div class="tool-icon text-purple fs-3 mb-3">
-                <i class="fa-solid fa-sitemap"></i>
+              <div class="tool-icon text-gray fs-3 mb-3">
+                <i class="fa-solid fa-gears"></i>
               </div>
               <span
                 class="font-jetbrains small fw-bold tracking-wider text-uppercase tool-title"
@@ -1636,15 +1684,15 @@
 
           <div class="col-12 col-sm-6 col-md-4 col-xl-2 d-flex">
             <div
-              class="workflow-tool-card w-100 p-4 rounded-3 border border-dark-glow d-flex flex-column align-items-center justify-content-center text-center"
+              class="workflow-tool-card w-100 p-4 rounded-3 d-flex flex-column align-items-center justify-content-center text-center"
             >
-              <div class="tool-icon text-green fs-3 mb-3">
-                <i class="fa-solid fa-square-poll-vertical"></i>
+              <div class="tool-icon text-danger fs-3 mb-3">
+                <i class="fa-brands fa-buffer"></i>
               </div>
               <span
                 class="font-jetbrains small fw-bold tracking-wider text-uppercase tool-title"
               >
-                Search Console Logs
+                Content Clusters
               </span>
             </div>
           </div>
@@ -1803,6 +1851,7 @@
     <!-- section 16 -->
 
     <section
+      id="contact"
       class="cta-compounds-section py-5 bg-dark-slate text-white position-relative"
     >
       <div class="container my-5 text-center position-relative z-index-2">
@@ -1866,7 +1915,7 @@
             <span
               class="font-jetbrains text-muted-gray text-uppercase tracking-widest brand-subheading mt-1"
             >
-              Growth Systems & SEO Strategy
+              Growth Systems & SEO Strategist
             </span>
           </a>
 
@@ -1883,5 +1932,43 @@
         </div>
       </div>
     </footer>
+
+    <script>
+      // 1. Existing Nav Link Click Handler (from previous step)
+      document.querySelectorAll(".nav-links .nav-link").forEach((link) => {
+        link.addEventListener("click", function () {
+          document
+            .querySelectorAll(".nav-links .nav-link")
+            .forEach((el) => el.classList.remove("active"));
+          this.classList.add("active");
+        });
+      });
+
+      // 2. New Scroll to Top Handler
+      const scrollToTopBtn = document.getElementById("scrollToTop");
+
+      if (scrollToTopBtn) {
+        scrollToTopBtn.addEventListener("click", function () {
+          // Smooth scroll to the top of the page
+          window.scrollTo({
+            top: 0,
+            behavior: "smooth",
+          });
+
+          // Remove 'active' class from all navigation links
+          document
+            .querySelectorAll(".nav-links .nav-link")
+            .forEach((el) => el.classList.remove("active"));
+
+          // Find the Home link (index.html or the first link) and make it active
+          const homeLink =
+            document.querySelector('.nav-links a[href="index.html"]') ||
+            document.querySelector('.nav-links a[href="/"]');
+          if (homeLink) {
+            homeLink.classList.add("active");
+          }
+        });
+      }
+    </script>
   </body>
 </html>
