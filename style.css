@@ -438,13 +438,13 @@ header, .navbar {
 
 /* Micro-Tag Styles & Hover Fluid Scaling */
 .frontier-tag {
-  background-color: #0b1329;
+  background: linear-gradient(145deg, #0f172a, #070a13);
   transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
   cursor: default;
 }
 
 .frontier-tag:hover {
-  background-color: #111e3d;
+  background-color: #152956;
   border-color: #334155 !important;
   transform: translateY(-3px);
   box-shadow: 0 8px 20px rgba(56, 189, 248, 0.05);
