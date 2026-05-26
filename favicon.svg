@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+  <!-- Circular Dark Background to match her site's dark theme -->
+  <circle cx="50" cy="50" r="48" fill="#161b22" stroke="#30363d" stroke-width="4"/>
+  
+  <!-- Sleek, modern letter 'P' aligned beautifully in the center -->
+  <text x="50%" y="54%" 
+        dominant-baseline="middle" 
+        text-anchor="middle" 
+        font-family="'Helvetica Neue', Arial, sans-serif" 
+        font-size="60" 
+        font-weight="800" 
+        fill="#58a6ff">P</text>
+</svg>
